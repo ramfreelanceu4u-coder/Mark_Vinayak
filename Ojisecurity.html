@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OJI Logistics - Experience</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f5f7fa;
+            color: #10203d;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .logistics-experience-section {
+            width: 100%;
+            padding: 80px 0 90px;
+            background: #f5f7fa;
+        }
+
+        .container {
+            width: min(1400px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .logistics-header {
+            max-width: 850px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .logistics-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 12px;
+
+            color: #d8ad00;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .logistics-label span {
+            width: 42px;
+            height: 3px;
+
+            display: inline-block;
+
+            background: #d8ad00;
+
+            border-radius: 20px;
+        }
+
+        .logistics-header h1 {
+            color: #10203d;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            font-weight: 800;
+
+            line-height: 1.08;
+        }
+
+        .logistics-header h1 strong {
+            color: #d8ad00;
+        }
+
+        .logistics-header p {
+            max-width: 760px;
+
+            margin: 18px auto 0;
+
+            color: #5c6c80;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           MOSAIC GRID
+        ===================================================== */
+
+        .logistics-mosaic {
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 150px);
+
+            gap: 4px;
+
+            width: 100%;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 20px 55px rgba(16, 32, 61, 0.12);
+        }
+
+
+        /* =====================================================
+           COMMON IMAGE BOX
+        ===================================================== */
+
+        .mosaic-item {
+            position: relative;
+
+            min-width: 0;
+            min-height: 0;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            background: #dfe5ec;
+        }
+
+        .mosaic-item img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            /*
+               Any image dimensions work.
+               The image fills the box automatically.
+            */
+
+            object-fit: cover;
+            object-position: center;
+
+            transition:
+                transform 0.55s ease,
+                filter 0.55s ease;
+        }
+
+
+        /* =====================================================
+           8 IMAGE DESKTOP MOSAIC
+
+           ┌──────────────────────┬─────────────┐
+           │                      │     02      │
+           │          01          ├─────────────┤
+           │                      │     03      │
+           ├──────────┬───────────┼──────┬──────┤
+           │          │           │  06  │  07  │
+           │    04    │    05     ├──────┴──────┤
+           │          │           │     08      │
+           └──────────┴───────────┴─────────────┘
+        ===================================================== */
+
+        .mosaic-01 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+        }
+
+        .mosaic-02 {
+            grid-column: 4 / 6;
+            grid-row: 1 / 2;
+        }
+
+        .mosaic-03 {
+            grid-column: 4 / 6;
+            grid-row: 2 / 3;
+        }
+
+        .mosaic-04 {
+            grid-column: 1 / 3;
+            grid-row: 3 / 5;
+        }
+
+        .mosaic-05 {
+            grid-column: 3 / 4;
+            grid-row: 3 / 5;
+        }
+
+        .mosaic-06 {
+            grid-column: 4 / 5;
+            grid-row: 3 / 4;
+        }
+
+        .mosaic-07 {
+            grid-column: 5 / 6;
+            grid-row: 3 / 4;
+        }
+
+        .mosaic-08 {
+            grid-column: 4 / 6;
+            grid-row: 4 / 5;
+        }
+
+
+        /* =====================================================
+           IMAGE OVERLAY
+        ===================================================== */
+
+        .image-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 20px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(4, 21, 42, 0.85),
+                    rgba(4, 21, 42, 0)
+                );
+
+            opacity: 0;
+
+            transition: opacity 0.35s ease;
+
+            pointer-events: none;
+        }
+
+        .mosaic-item:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .mosaic-item:hover img {
+            transform: scale(1.06);
+            filter: brightness(0.82);
+        }
+
+        .image-overlay span {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 8px;
+
+            border-radius: 50%;
+
+            background: #10203d;
+
+            border: 2px solid #f3c400;
+
+            color: #f3c400;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .image-overlay h3 {
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           BOTTOM INFORMATION
+        ===================================================== */
+
+        .logistics-bottom {
+            display: flex;
+
+            align-items: center;
+
+            gap: 24px;
+
+            margin-top: 25px;
+
+            padding: 28px 35px;
+
+            border-radius: 16px;
+
+            background: #10203d;
+
+            box-shadow:
+                0 12px 30px rgba(16, 32, 61, 0.10);
+        }
+
+        .bottom-icon {
+            width: 65px;
+            height: 65px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f3c400;
+
+            color: #10203d;
+
+            font-size: 27px;
+        }
+
+        .bottom-content {
+            flex: 1;
+        }
+
+        .bottom-label {
+            color: #f3c400;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+        }
+
+        .bottom-content h2 {
+            margin: 5px 0 7px;
+
+            color: #ffffff;
+
+            font-size: 27px;
+
+            line-height: 1.25;
+        }
+
+        .bottom-content h2 span {
+            color: #f3c400;
+        }
+
+        .bottom-content p {
+            max-width: 900px;
+
+            margin: 0;
+
+            color: #d6e0eb;
+
+            font-size: 13px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .image-lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(3, 15, 30, 0.94);
+        }
+
+        .image-lightbox.active {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: 88vw;
+            max-height: 85vh;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: fixed;
+
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #10203d;
+
+            color: #ffffff;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: #f3c400;
+            color: #10203d;
+        }
+
+        .lightbox-close {
+            top: 25px;
+            right: 25px;
+        }
+
+        .lightbox-prev {
+            left: 25px;
+            top: 50%;
+
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            right: 25px;
+            top: 50%;
+
+            transform: translateY(-50%);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .logistics-experience-section {
+                padding: 65px 0 70px;
+            }
+
+            .logistics-mosaic {
+
+                grid-template-columns: repeat(4, 1fr);
+
+                grid-template-rows: repeat(4, 150px);
+
+            }
+
+
+            .mosaic-01 {
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+            }
+
+            .mosaic-02 {
+                grid-column: 3 / 5;
+                grid-row: 1 / 2;
+            }
+
+            .mosaic-03 {
+                grid-column: 3 / 5;
+                grid-row: 2 / 3;
+            }
+
+            .mosaic-04 {
+                grid-column: 1 / 2;
+                grid-row: 3 / 5;
+            }
+
+            .mosaic-05 {
+                grid-column: 2 / 3;
+                grid-row: 3 / 5;
+            }
+
+            .mosaic-06 {
+                grid-column: 3 / 4;
+                grid-row: 3 / 4;
+            }
+
+            .mosaic-07 {
+                grid-column: 4 / 5;
+                grid-row: 3 / 4;
+            }
+
+            .mosaic-08 {
+                grid-column: 3 / 5;
+                grid-row: 4 / 5;
+            }
+
+            .logistics-bottom {
+                padding: 24px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 575px) {
+
+            .logistics-experience-section {
+                padding: 50px 0 55px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .logistics-header {
+                margin-bottom: 30px;
+            }
+
+            .logistics-header h1 {
+                font-size: 34px;
+            }
+
+            .logistics-header p {
+                font-size: 13px;
+
+                line-height: 1.65;
+            }
+
+
+            /* One image per row */
+
+            .logistics-mosaic {
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    repeat(8, 210px);
+
+            }
+
+
+            .mosaic-01,
+            .mosaic-02,
+            .mosaic-03,
+            .mosaic-04,
+            .mosaic-05,
+            .mosaic-06,
+            .mosaic-07,
+            .mosaic-08 {
+
+                grid-column: 1;
+                grid-row: auto;
+
+            }
+
+
+            .image-overlay {
+                opacity: 1;
+            }
+
+
+            .logistics-bottom {
+
+                display: block;
+
+                padding: 24px;
+
+            }
+
+            .bottom-icon {
+
+                margin-bottom: 18px;
+
+            }
+
+            .bottom-content h2 {
+
+                font-size: 22px;
+
+            }
+
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    
+
+<!-- =========================================================
+     OJI LOGISTICS EXPERIENCE
+========================================================= -->
+
+<section class="logistics-experience-section">
+
+    <div class="container">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="logistics-header">
+
+            <div class="logistics-label">
+                <span></span>
+                OJI SECURITY SERVICES
+            </div>
+
+            <h1>
+                Skills.
+                <strong>Employment. Empowerment.</strong>
+            </h1>
+
+            <p>
+                OJI Security Services focuses on developing skilled manpower through
+                practical training, technical skill development and employment
+                opportunities for youth and emerging professionals across India.
+            </p>
+
+        </div>
+
+
+        <!-- ================= IMAGE MOSAIC ================= -->
+
+        <div class="logistics-mosaic">
+
+
+            <!-- 01 -->
+
+            <div class="mosaic-item mosaic-01">
+
+                <img src="safety1.jpeg"
+                     alt="Skill Development"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>01</span>
+
+                    <h3>
+                        Skill Development
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="mosaic-item mosaic-02">
+
+                <img src="safety2.jpeg"
+                     alt="Technical Training"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>02</span>
+
+                    <h3>
+                        Technical Training
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="mosaic-item mosaic-03">
+
+                <img src="safety3.jpeg"
+                     alt="Manpower Solutions"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>03</span>
+
+                    <h3>
+                        Manpower Solutions
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="mosaic-item mosaic-04">
+
+                <img src="safety4.jpeg"
+                     alt="Employment Opportunities"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>04</span>
+
+                    <h3>
+                        Employment Opportunities
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="mosaic-item mosaic-05">
+
+                <img src="safety5.jpeg"
+                     alt="Industry Oriented Training"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>05</span>
+
+                    <h3>
+                        Industry-Oriented Training
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="mosaic-item mosaic-06">
+
+                <img src="safety6.jpeg"
+                     alt="Professional Skills"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>06</span>
+
+                    <h3>
+                        Professional Skills
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="mosaic-item mosaic-07">
+
+                <img src="safety7.jpeg"
+                     alt="Workforce Development"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>07</span>
+
+                    <h3>
+                        Workforce Development
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="mosaic-item mosaic-08">
+
+                <img src="safety7.jpeg"
+                     alt="Connecting Talent & Opportunity"
+                     loading="lazy">
+
+                <div class="image-overlay">
+
+                    <span>08</span>
+
+                    <h3>
+                        Connecting Talent & Opportunity
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= BOTTOM CONTENT ================= -->
+
+        <div class="logistics-bottom">
+
+            <div class="bottom-icon">
+                <i class="bi bi-people-fill"></i>
+            </div>
+
+            <div class="bottom-content">
+
+                <span class="bottom-label">
+                    SKILL DEVELOPMENT & EMPLOYMENT
+                </span>
+
+                <h2>
+                    Empowering People.
+                    <span>Creating Opportunities.</span>
+                </h2>
+
+                <p>
+                    OJI Security Services works to bridge the gap between talent
+                    and opportunity by developing practical skills and connecting
+                    trained manpower with suitable organisations, industries and businesses.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LIGHTBOX
+========================================================= -->
+
+<div class="image-lightbox" id="imageLightbox">
+
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+    </button>
+
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <img id="lightboxImage"
+         src=""
+         alt="">
+
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+
+</div>
+
+
+
+<script>
+
+    /* =====================================================
+       LOGISTICS IMAGE LIGHTBOX
+    ===================================================== */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const galleryImages =
+            document.querySelectorAll(".mosaic-item img");
+
+        const lightbox =
+            document.getElementById("imageLightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const closeButton =
+            document.getElementById("lightboxClose");
+
+        const previousButton =
+            document.getElementById("lightboxPrev");
+
+        const nextButton =
+            document.getElementById("lightboxNext");
+
+
+        let currentIndex = 0;
+
+
+        /* =================================================
+           OPEN IMAGE
+        ================================================= */
+
+        function openLightbox(index) {
+
+            currentIndex = index;
+
+            lightboxImage.src =
+                galleryImages[currentIndex].src;
+
+            lightboxImage.alt =
+                galleryImages[currentIndex].alt;
+
+            lightbox.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+        /* =================================================
+           CLOSE
+        ================================================= */
+
+        function closeLightbox() {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+        }
+
+
+        /* =================================================
+           CHANGE IMAGE
+        ================================================= */
+
+        function showImage(index) {
+
+            if (index < 0) {
+                index = galleryImages.length - 1;
+            }
+
+            if (index >= galleryImages.length) {
+                index = 0;
+            }
+
+            currentIndex = index;
+
+            lightboxImage.src =
+                galleryImages[currentIndex].src;
+
+            lightboxImage.alt =
+                galleryImages[currentIndex].alt;
+        }
+
+
+        /* =================================================
+           IMAGE CLICK
+        ================================================= */
+
+        galleryImages.forEach(function (image, index) {
+
+            image.parentElement.addEventListener(
+                "click",
+                function () {
+
+                    openLightbox(index);
+
+                }
+            );
+
+        });
+
+
+        /* =================================================
+           BUTTON EVENTS
+        ================================================= */
+
+        closeButton.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        previousButton.addEventListener(
+            "click",
+            function () {
+
+                showImage(currentIndex - 1);
+
+            }
+        );
+
+
+        nextButton.addEventListener(
+            "click",
+            function () {
+
+                showImage(currentIndex + 1);
+
+            }
+        );
+
+
+        /* =================================================
+           CLICK OUTSIDE
+        ================================================= */
+
+        lightbox.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === lightbox) {
+
+                    closeLightbox();
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           KEYBOARD
+        ================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (!lightbox.classList.contains("active")) {
+                    return;
+                }
+
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+
+                if (event.key === "ArrowLeft") {
+                    showImage(currentIndex - 1);
+                }
+
+                if (event.key === "ArrowRight") {
+                    showImage(currentIndex + 1);
+                }
+
+            }
+        );
+
+
+    });
+
+</script>
+
+</body>
+</html>
